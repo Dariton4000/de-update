@@ -1,6 +1,5 @@
 {
   "copyLmStudioLinkButton/toolTip": "Modell-Download-Link kopieren",
-
   "filter.noMatches": "Keine Übereinstimmungen",
   "longRunningTask": {
     "unbundlingDependencies": {
@@ -31,8 +30,241 @@
     "retry": "Wiederholen"
   },
   "artifacts": {
-    "fetchError": "Artefakte konnten nicht abgerufen werden"
+    "fetchError": "Artefakte konnten nicht abgerufen werden",
+    "organizationVisible": "Organisation sichtbar"
   },
   "incompatible": "Inkompatibel",
-  "compatible": "Kompatibel"
+  "compatible": "Kompatibel",
+  "public": "Öffentlich",
+  "private": "Privat",
+  "yes": "Ja",
+  "no": "Nein",
+  "go": "Los",
+  "proceedWithEllipsis": "Fortfahren...",
+  "proceed": "Fortfahren",
+  "inProgress": "In Bearbeitung...",
+  "failed": "Fehlgeschlagen",
+  "pending": "Ausstehend",
+  "doneWithExclamation": "Fertig!",
+  "done": "Fertig",
+  "beta": "Beta",
+  "complete": {
+    "completeWithEllipsis": "Abschließen...",
+    "complete": "Abschließen",
+    "completingWithEllipsis": "Wird abgeschlossen...",
+    "completing": "Wird abgeschlossen",
+    "completedWithExclamation": "Abgeschlossen!",
+    "completed": "Abgeschlossen"
+  },
+  "cancel": {
+    "cancelWithEllipsis": "Abbrechen...",
+    "cancel": "Abbrechen",
+    "cancelingWithEllipsis": "Wird abgebrochen...",
+    "canceling": "Wird abgebrochen",
+    "canceled": "Abgebrochen"
+  },
+  "next": {
+    "nextWithEllipsis": "Weiter...",
+    "next": "Weiter"
+  },
+  "back": {
+    "backWithEllipsis": "Zurück...",
+    "back": "Zurück"
+  },
+  "close": {
+    "closeWithEllipsis": "Schließen...",
+    "close": "Schließen",
+    "closingWithEllipsis": "Wird geschlossen...",
+    "closing": "Wird geschlossen",
+    "closedWithExclamation": "Geschlossen!",
+    "closed": "Geschlossen"
+  },
+  "delete": {
+    "deleteWithEllipsis": "Löschen...",
+    "delete": "Löschen",
+    "deletingWithEllipsis": "Wird gelöscht...",
+    "deleting": "Wird gelöscht",
+    "deletedWithExclamation": "Gelöscht!",
+    "deleted": "Gelöscht"
+  },
+  "retry": {
+    "retryWithEllipsis": "Erneut versuchen...",
+    "retry": "Erneut versuchen",
+    "retryingWithEllipsis": "Erneuter Versuch...",
+    "retrying": "Erneuter Versuch"
+  },
+  "refresh": {
+    "refreshWithEllipsis": "Aktualisieren...",
+    "refresh": "Aktualisieren",
+    "refreshingWithEllipsis": "Wird aktualisiert...",
+    "refreshing": "Wird aktualisiert",
+    "refreshedWithExclamation": "Aktualisiert!",
+    "refreshed": "Aktualisiert"
+  },
+  "confirm": {
+    "confirm": "Bestätigen",
+    "confirmingWithEllipsis": "Wird bestätigt...",
+    "confirming": "Wird bestätigt",
+    "confirmedWithExclamation": "Bestätigt!",
+    "confirmed": "Bestätigt"
+  },
+  "copy": {
+    "copyWithEllipsis": "Kopieren...",
+    "copy": "Kopieren",
+    "copyingWithEllipsis": "Wird kopiert...",
+    "copying": "Wird kopiert",
+    "copiedWithExclamation": "Kopiert!",
+    "copied": "Kopiert"
+  },
+  "edit": {
+    "editWithEllipsis": "Bearbeiten...",
+    "edit": "Bearbeiten",
+    "editingWithEllipsis": "Wird bearbeitet...",
+    "editing": "Wird bearbeitet",
+    "editedWithExclamation": "Bearbeitet!",
+    "edited": "Bearbeitet"
+  },
+  "load": {
+    "loadWithEllipsis": "Laden...",
+    "load": "Laden",
+    "loadingWithEllipsis": "Wird geladen...",
+    "loading": "Wird geladen",
+    "loadedWithExclamation": "Geladen!",
+    "loaded": "Geladen"
+  },
+  "save": {
+    "saveWithEllipsis": "Speichern...",
+    "save": "Speichern",
+    "savingWithEllipsis": "Wird gespeichert...",
+    "saving": "Wird gespeichert",
+    "savedWithExclamation": "Gespeichert!",
+    "saved": "Gespeichert"
+  },
+  "saveAs": {
+    "saveAsWithEllipsis": "Save As...",
+    "saveAs": "Save As"
+  },
+  "saveAsNew": {
+    "saveAsNewWithEllipsis": "Save As New...",
+    "saveAsNew": "Save As New"
+  },
+  "search": {
+    "searchWithEllipsis": "Search...",
+    "search": "Search",
+    "searchingWithEllipsis": "Searching...",
+    "searching": "Searching"
+  },
+  "update": {
+    "updateWithEllipsis": "Update...",
+    "update": "Update",
+    "updatingWithEllipsis": "Updating...",
+    "updating": "Updating",
+    "updatedWithExclamation": "Updated!",
+    "updated": "Updated"
+  },
+  "create": {
+    "createWithEllipsis": "Create...",
+    "create": "Create",
+    "creatingWithEllipsis": "Creating",
+    "creating": "Creating",
+    "createdWithExclamation": "Created!",
+    "created": "Created"
+  },
+  "reset": {
+    "resetWithEllipsis": "Reset...",
+    "reset": "Reset",
+    "resettingWithEllipsis": "Resetting...",
+    "resetting": "Resetting"
+  },
+  "pause": {
+    "pause": "Pause",
+    "pausingWithEllipsis": "Pausing...",
+    "pausing": "Pausing",
+    "paused": "Paused"
+  },
+  "download": {
+    "download": "Download",
+    "downloadingWithEllipsis": "Downloading...",
+    "downloading": "Downloading",
+    "downloadedWithExclamation": "Downloaded!",
+    "downloaded": "Downloaded"
+  },
+  "upload": {
+    "uploadWithEllipsis": "Upload...",
+    "upload": "Upload",
+    "uploadingWithEllipsis": "Uploading...",
+    "uploading": "Uploading",
+    "uploadedWithExclamation": "Uploaded!",
+    "uploaded": "Uploaded"
+  },
+  "remove": {
+    "removeWithEllipsis": "Remove...",
+    "remove": "Remove",
+    "removingWithEllipsis": "Removing...",
+    "removing": "Removing",
+    "removedWithExclamation": "Removed!",
+    "removed": "Removed"
+  },
+  "uninstall": {
+    "uninstallWithEllipsis": "Uninstall...",
+    "uninstall": "Uninstall",
+    "uninstallingWithEllipsis": "Uninstalling...",
+    "uninstalling": "Uninstalling",
+    "uninstalledWithExclamation": "Uninstalled!",
+    "uninstalled": "Uninstalled"
+  },
+  "resume": {
+    "resumeWithEllipsis": "Resume...",
+    "resume": "Resume",
+    "resumingWithEllipsis": "Resuming...",
+    "resuming": "Resuming"
+  },
+  "start": {
+    "startWithEllipsis": "Start...",
+    "start": "Start",
+    "startingWithEllipsis": "Starting...",
+    "starting": "Starting",
+    "started": "Started"
+  },
+  "stop": {
+    "stopWithEllipsis": "Stop...",
+    "stop": "Stop",
+    "stoppingWithEllipsis": "Stopping...",
+    "stopping": "Stopping",
+    "stoppedWithExclamation": "Stopped!",
+    "stopped": "Stopped"
+  },
+  "import": {
+    "importWithEllipsis": "Import...",
+    "import": "Import",
+    "importingWithEllipsis": "Importing...",
+    "importing": "Importing",
+    "importedWithExclamation": "Imported!",
+    "imported": "Imported"
+  },
+  "letsGo": {
+    "letsGo": "Let's Go",
+    "letsGoWithEllipsis": "Let's Go...",
+    "letsGoWithExclamation": "Let's Go!"
+  },
+  "run": {
+    "runWithEllipsis": "Run...",
+    "run": "Run",
+    "runningWithEllipsis": "Running...",
+    "running": "Running"
+  },
+  "configure": {
+    "configureWithEllipsis": "Configure...",
+    "configure": "Configure",
+    "configuringWithEllipsis": "Configuring...",
+    "configured": "Configured"
+  },
+  "publish": {
+    "publishWithEllipsis": "Publish...",
+    "publish": "Publish",
+    "publishingWithEllipsis": "Publishing...",
+    "publishing": "Publishing",
+    "publishedWithExclamation": "Published!",
+    "published": "Published"
+  }
 }

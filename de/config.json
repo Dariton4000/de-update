@@ -31,12 +31,18 @@
     "sampling/title": "Sampling",
     "settings/title": "Einstellungen",
     "toolUse/title": "Toolverwendung",
-    "promptTemplate/title": "Prompt-Vorlage"
+    "promptTemplate/title": "Prompt-Vorlage",
+    "customFields/title": "Custom Fields"
   },
-
   "llm.prediction.systemPrompt/title": "System-Prompt",
   "llm.prediction.systemPrompt/description": "Verwenden Sie dieses Feld, um dem Modell Hintergrundanweisungen zu geben, z. B. eine Reihe von Regeln, Einschränkungen oder allgemeinen Anforderungen.",
   "llm.prediction.systemPrompt/subTitle": "Richtlinien für die KI",
+  "llm.prediction.systemPrompt/openEditor": "Editor",
+  "llm.prediction.systemPrompt/closeEditor": "Close Editor",
+  "llm.prediction.systemPrompt/openedEditor": "Opened in Editor...",
+  "llm.prediction.systemPrompt/edit": "Edit System Prompt...",
+  "llm.prediction.systemPrompt/addInstructionsWithMore": "Add instructions...",
+  "llm.prediction.systemPrompt/addInstructions": "Add instructions",
   "llm.prediction.temperature/title": "Temperatur",
   "llm.prediction.temperature/subTitle": "Wie viel Zufälligkeit eingeführt werden soll. 0 ergibt jedes Mal das gleiche Ergebnis, während höhere Werte Kreativität und Varianz erhöhen",
   "llm.prediction.temperature/info": "Aus den llama.cpp-Hilfedokumenten: \"Der Standardwert ist <{{dynamicValue}}>, was ein Gleichgewicht zwischen Zufälligkeit und Determinismus bietet. Im Extremfall wählt eine Temperatur von 0 immer das wahrscheinlichste nächste Token aus, was zu identischen Ausgaben bei jedem Durchlauf führt\"",
@@ -110,7 +116,19 @@
   "llm.prediction.speculativeDecoding.draftModel/title": "Entwurfsmodell",
   "llm.prediction.reasoning.parsing/title": "Parsing von Begründungsabschnitten",
   "llm.prediction.reasoning.parsing/subTitle": "Wie Begründungsabschnitte in der Ausgabe des Modells geparst werden sollen",
-
+  "llm.load.mainGpu/title": "Main GPU",
+  "llm.load.mainGpu/subTitle": "The GPU to prioritize for model computation",
+  "llm.load.mainGpu/placeholder": "Select main GPU...",
+  "llm.load.splitStrategy/title": "Split Strategy",
+  "llm.load.splitStrategy/subTitle": "How to split model computation across GPUs",
+  "llm.load.splitStrategy/placeholder": "Select split strategy...",
+  "llm.load.offloadKVCacheToGpu/title": "Offload KV Cache to GPU Memory",
+  "llm.load.offloadKVCacheToGpu/subTitle": "Offload the KV cache to GPU memory. Improves performance but requires more GPU memory",
+  "load.gpuStrictVramCap/title": "Limit Model Offload to Dedicated GPU Memory",
+  "load.gpuStrictVramCap.customSubTitleOff": "OFF: Allow model weights to offload to shared memory if dedicated GPU memory is full",
+  "load.gpuStrictVramCap.customSubTitleOn": "ON: The system will limit offload of model weights to dedicated GPU memory and RAM only. Context may still use shared memory",
+  "load.gpuStrictVramCap.customGpuOffloadWarning": "Model offload limited to dedicated GPU memory. Actual number of offloaded layers may differ",
+  "load.allGpusDisabledWarning": "All GPUs are currently disabled. Enable at least one to offload",
   "llm.load.contextLength/title": "Kontextlänge",
   "llm.load.contextLength/subTitle": "Die maximale Anzahl von Token, die das Modell in einem Prompt berücksichtigen kann. Weitere Möglichkeiten zur Verwaltung finden Sie unter den Optionen für den Konversationsüberlauf unter \"Inferenzparameter\"",
   "llm.load.contextLength/info": "Gibt die maximale Anzahl von Token an, die das Modell gleichzeitig berücksichtigen kann, was sich darauf auswirkt, wie viel Kontext es während der Verarbeitung beibehält",
@@ -118,7 +136,9 @@
   "llm.load.seed/title": "Seed",
   "llm.load.seed/subTitle": "Der Seed für den Zufallszahlengenerator, der bei der Textgenerierung verwendet wird. -1 ist zufällig",
   "llm.load.seed/info": "Zufalls-Seed: Legt den Seed für die Zufallszahlengenerierung fest, um reproduzierbare Ergebnisse zu gewährleisten",
-
+  "llm.load.numCpuExpertLayersRatio/title": "Force Model Expert Weights onto CPU",
+  "llm.load.numCpuExpertLayersRatio/subTitle": "Whether to force MoE expert weights into CPU RAM. Saves VRAM and can be faster than partial GPU offload. Not recommended if the model fits entirely in VRAM.",
+  "llm.load.numCpuExpertLayersRatio/info": "Specifies whether or not to put all MoE expert layers in to CPU RAM. Leaves attention layers on GPU, saving VRAM while keeping inference fairly fast",
   "llm.load.llama.evalBatchSize/title": "Evaluierungs-Batchgröße",
   "llm.load.llama.evalBatchSize/subTitle": "Anzahl der Eingabetoken, die gleichzeitig verarbeitet werden sollen. Eine Erhöhung erhöht die Leistung auf Kosten der Speichernutzung",
   "llm.load.llama.evalBatchSize/info": "Legt die Anzahl der Beispiele fest, die während der Evaluierung in einem Batch zusammen verarbeitet werden, was sich auf Geschwindigkeit und Speichernutzung auswirkt",
@@ -177,7 +197,6 @@
   "llm.load.mlx.kvCacheQuantization/groupSize/tooltip": "Erweitert: Konfiguration der quantisierten 'matmul group size'\n\n• Genauigkeit = Gruppengröße 32\n• Ausgeglichen = Gruppengröße 64\n• Schnell = Gruppengröße 128\n",
   "llm.load.mlx.kvCacheQuantization/quantizedStart/title": "Beginnen Sie mit der Quantisierung, wenn der Kontext diese Länge erreicht",
   "llm.load.mlx.kvCacheQuantization/quantizedStart/tooltip": "Wenn der Kontext diese Anzahl von Token erreicht,\nbeginnen Sie mit der Quantisierung des KV-Caches",
-
   "embedding.load.contextLength/title": "Kontextlänge",
   "embedding.load.contextLength/subTitle": "Die maximale Anzahl von Token, die das Modell in einem Prompt berücksichtigen kann. Weitere Möglichkeiten zur Verwaltung finden Sie unter den Optionen für den Konversationsüberlauf unter \"Inferenzparameter\"",
   "embedding.load.contextLength/info": "Gibt die maximale Anzahl von Token an, die das Modell gleichzeitig berücksichtigen kann, was sich darauf auswirkt, wie viel Kontext es während der Verarbeitung beibehält",
@@ -201,9 +220,7 @@
   "embedding.load.llama.tryMmap/info": "Modelldateien direkt von der Festplatte in den Speicher laden",
   "embedding.load.seed/title": "Seed",
   "embedding.load.seed/subTitle": "Der Seed für den Zufallszahlengenerator, der bei der Textgenerierung verwendet wird. -1 ist ein zufälliger Seed",
-
   "embedding.load.seed/info": "Zufalls-Seed: Legt den Seed für die Zufallszahlengenerierung fest, um reproduzierbare Ergebnisse zu gewährleisten",
-
   "presetTooltip": {
     "included/title": "Voreingestellte Werte",
     "included/description": "Die folgenden Felder werden angewendet",
@@ -219,9 +236,11 @@
     "legacy/description": "Dies ist eine Legacy-Voreinstellung. Sie enthält die folgenden Felder, die entweder jetzt automatisch verarbeitet werden oder nicht mehr anwendbar sind.",
     "button/publish": "Im Hub veröffentlichen",
     "button/pushUpdate": "Änderungen an den Hub übertragen",
-    "button/export": "Exportieren"
+    "button/noChangesToPush": "No changes to push",
+    "button/export": "Exportieren",
+    "hubLabel": "Preset from the Hub by {{user}}",
+    "ownHubLabel": "Your preset from the Hub"
   },
-
   "customInputs": {
     "string": {
       "emptyParagraph": "<Leer>"
@@ -281,9 +300,9 @@
       "max": "MAX",
       "off": "AUS"
     },
-    "llamaAccelerationSplitStrategy": {
-      "evenly": "Gleichmäßig",
-      "favorMainGpu": "Haupt-GPU bevorzugen"
+    "gpuSplitStrategy": {
+      "evenly": "Evenly",
+      "favorMainGpu": "Favor Main GPU"
     },
     "speculativeDecodingDraftModel": {
       "readMore": "Lesen Sie, wie es funktioniert",
@@ -318,6 +337,10 @@
       "startString/placeholder": "Start-String eingeben...",
       "endString/label": "End-String",
       "endString/placeholder": "End-String eingeben..."
+    },
+    "llamaAccelerationSplitStrategy": {
+      "evenly": "Gleichmäßig",
+      "favorMainGpu": "Haupt-GPU bevorzugen"
     }
   },
   "saveConflictResolution": {
@@ -345,24 +368,23 @@
   "idleTTL.label": "Automatisch entladen bei Leerlauf (TTL)",
   "idleTTL.hint": "Wenn festgelegt, wird das Modell automatisch entladen, nachdem es für die angegebene Zeitspanne im Leerlauf war.",
   "idleTTL.mins": "Min.",
-
   "presets": {
     "title": "Voreinstellung",
-    "commitChanges": "Änderungen festschreiben",
-    "commitChanges/description": "Schreiben Sie Ihre Änderungen an der Voreinstellung fest.",
-    "commitChanges.manual": "Neue Felder erkannt. Sie können auswählen, welche Änderungen in die Voreinstellung aufgenommen werden sollen.",
-    "commitChanges.manual.hold.0": "Halten Sie",
-    "commitChanges.manual.hold.1": "gedrückt, um auszuwählen, welche Änderungen an der Voreinstellung festgeschrieben werden sollen.",
-    "commitChanges.saveAll.hold.0": "Halten Sie",
-    "commitChanges.saveAll.hold.1": "gedrückt, um alle Änderungen zu speichern.",
-    "commitChanges.saveInPreset.hold.0": "Halten Sie",
-    "commitChanges.saveInPreset.hold.1": "gedrückt, um nur Änderungen an Feldern zu speichern, die bereits in der Voreinstellung enthalten sind.",
-    "commitChanges/error": "Änderungen an der Voreinstellung konnten nicht festgeschrieben werden.",
-    "commitChanges.manual/description": "Wählen Sie aus, welche Änderungen in die Voreinstellung aufgenommen werden sollen.",
+    "saveChanges": "Save",
+    "saveChanges/description": "Save your changes to the preset.",
+    "saveChanges.manual": "New fields detected. You will be able to choose which changes to include in the preset.",
+    "saveChanges.manual.hold.0": "Hold",
+    "saveChanges.manual.hold.1": "to choose which changes to save to the preset.",
+    "saveChanges.saveAll.hold.0": "Hold",
+    "saveChanges.saveAll.hold.1": "to save all changes.",
+    "saveChanges.saveInPreset.hold.0": "Hold",
+    "saveChanges.saveInPreset.hold.1": "to only save changes to fields that are already included in the preset.",
+    "saveChanges/error": "Failed to save changes to the preset.",
+    "saveChanges.manual/description": "Choose which changes to include in the preset.",
     "saveAs": "Speichern als neu...",
     "presetNamePlaceholder": "Geben Sie einen Namen für die Voreinstellung ein...",
     "cannotCommitChangesLegacy": "Dies ist eine Legacy-Voreinstellung und kann nicht geändert werden. Sie können eine Kopie erstellen, indem Sie \"Speichern als neu...\" verwenden.",
-    "cannotCommitChangesNoChanges": "Keine Änderungen zum Festschreiben.",
+    "cannotSaveChangesNoChanges": "No changes to save.",
     "emptyNoUnsaved": "Voreinstellung auswählen...",
     "emptyWithUnsaved": "Ungespeicherte Voreinstellung",
     "saveEmptyWithUnsaved": "Voreinstellung speichern als...",
@@ -378,10 +400,12 @@
     "discardChanges/info": "Alle nicht festgeschriebenen Änderungen verwerfen und die Voreinstellung in ihren ursprünglichen Zustand zurückversetzen",
     "newEmptyPreset": "+ Neue Voreinstellung",
     "importPreset": "Importieren",
+    "contextMenuCopyIdentifier": "Copy Preset Identifier",
     "contextMenuSelect": "Voreinstellung anwenden",
     "contextMenuDelete": "Löschen...",
     "contextMenuShare": "Veröffentlichen...",
     "contextMenuOpenInHub": "Im Hub anzeigen",
+    "contextMenuPullFromHub": "Pull Latest",
     "contextMenuPushChanges": "Änderungen an den Hub übertragen",
     "contextMenuPushingChanges": "Wird übertragen...",
     "contextMenuPushedChanges": "Änderungen übertragen",
@@ -405,7 +429,11 @@
       "pushedToHub": "Ihre Voreinstellung wurde an den Hub übertragen",
       "descriptionPlaceholder": "Beschreibung eingeben...",
       "willBePublic": "Durch das Veröffentlichen Ihrer Voreinstellung wird sie öffentlich",
+      "willBePrivate": "Only you will be able to see this preset",
+      "willBeOrgVisible": "This preset will be visible to everyone in the organization.",
       "publicSubtitle": "Ihre Voreinstellung ist <custom-bold>Öffentlich</custom-bold>. Andere können sie auf lmstudio.ai herunterladen und forken",
+      "privateUsageReached": "Private preset number limit reached.",
+      "continueInBrowser": "Continue in Browser",
       "confirmShareButton": "Veröffentlichen",
       "error": "Voreinstellung konnte nicht veröffentlicht werden",
       "createFreeAccount": "Erstellen Sie ein kostenloses Konto im Hub, um Voreinstellungen zu veröffentlichen"
@@ -421,6 +449,44 @@
       "createFreeAccount": "Erstellen Sie ein kostenloses Konto im Hub, um Voreinstellungen zu veröffentlichen",
       "error": "Update konnte nicht übertragen werden",
       "confirmUpdateButton": "Übertragen"
+    },
+    "resolve": {
+      "title": "Resolve conflicts...",
+      "tooltip": "Open a modal to resolve differences with the Hub version"
+    },
+    "loginToManage": {
+      "title": "Login to manage..."
+    },
+    "downloadFromHub": {
+      "title": "Download",
+      "downloading": "Downloading...",
+      "success": "Downloaded!",
+      "error": "Failed to download"
+    },
+    "push": {
+      "title": "Push changes",
+      "pushing": "Pushing...",
+      "success": "Pushed",
+      "tooltip": "Push your local changes to the remote version hosted on the Hub",
+      "error": "Failed to push"
+    },
+    "saveAsNewModal": {
+      "title": "Oops! Did not find the preset on Hub",
+      "confirmSaveAsNewDescription": "Do you want to publish this preset as a new one?",
+      "confirmButton": "Publish as New"
+    },
+    "pull": {
+      "title": "Pull Latest",
+      "error": "Failed to pull",
+      "contextMenuErrorMessage": "Failed to pull",
+      "success": "Pulled",
+      "pulling": "Pulling...",
+      "upToDate": "Up to date!",
+      "unsavedChangesModal": {
+        "title": "You have unsaved changes.",
+        "bodyContent": "Pulling from remote will overwrite your unsaved changes. Continue?",
+        "confirmButton": "Overwrite Unsaved Changes"
+      }
     },
     "import": {
       "title": "Eine Voreinstellung aus einer Datei importieren",
@@ -477,26 +543,66 @@
     },
     "inclusiveness": {
       "speculativeDecoding": "In Voreinstellung einschließen"
-    }
+    },
+    "cannotCommitChangesNoChanges": "Keine Änderungen zum Festschreiben.",
+    "commitChanges": "Änderungen festschreiben",
+    "commitChanges.manual": "Neue Felder erkannt. Sie können auswählen, welche Änderungen in die Voreinstellung aufgenommen werden sollen.",
+    "commitChanges.manual.hold.0": "Halten Sie",
+    "commitChanges.manual.hold.1": "gedrückt, um auszuwählen, welche Änderungen an der Voreinstellung festgeschrieben werden sollen.",
+    "commitChanges.manual/description": "Wählen Sie aus, welche Änderungen in die Voreinstellung aufgenommen werden sollen.",
+    "commitChanges.saveAll.hold.0": "Halten Sie",
+    "commitChanges.saveAll.hold.1": "gedrückt, um alle Änderungen zu speichern.",
+    "commitChanges.saveInPreset.hold.0": "Halten Sie",
+    "commitChanges.saveInPreset.hold.1": "gedrückt, um nur Änderungen an Feldern zu speichern, die bereits in der Voreinstellung enthalten sind.",
+    "commitChanges/description": "Schreiben Sie Ihre Änderungen an der Voreinstellung fest.",
+    "commitChanges/error": "Änderungen an der Voreinstellung konnten nicht festgeschrieben werden."
   },
-
   "flashAttentionWarning": "Flash Attention ist eine experimentelle Funktion, die bei einigen Modellen Probleme verursachen kann. Wenn Probleme auftreten, versuchen Sie, sie zu deaktivieren.",
   "llamaKvCacheQuantizationWarning": "KV-Cache-Quantisierung ist eine experimentelle Funktion, die bei einigen Modellen Probleme verursachen kann. Flash Attention muss für die V-Cache-Quantisierung aktiviert sein. Wenn Probleme auftreten, setzen Sie auf den Standardwert \"F16\" zurück.",
-
   "seedUncheckedHint": "Zufalls-Seed",
   "ropeFrequencyBaseUncheckedHint": "Auto",
   "ropeFrequencyScaleUncheckedHint": "Auto",
-
   "hardware": {
-    "advancedGpuSettings": "Erweiterte GPU-Einstellungen",
-    "advancedGpuSettings.info": "Wenn Sie sich nicht sicher sind, belassen Sie diese bei ihren Standardwerten",
-    "advancedGpuSettings.reset": "Auf Standard zurücksetzen",
     "environmentVariables": {
       "title": "Umgebungsvariablen",
       "description": "Aktive Umgebungsvariablen während der Modelllebensdauer.",
       "key.placeholder": "Variable auswählen...",
       "value.placeholder": "Wert"
     },
+    "environmentVariables.info": "If you're unsure, leave these at their default values",
+    "environmentVariables.reset": "Reset to default",
+    "gpus.information": "Configure graphics processing units (GPUs) detected on your machine",
+    "gpuSettings": {
+      "editMaxCapacity": "Edit Max Capacity",
+      "hideEditMaxCapacity": "Hide Edit Max Capacity",
+      "allOffWarning": "All GPUs are off or disabled, ensure that there is some GPU allocation to enable loading models",
+      "split": {
+        "title": "Strategie",
+        "placeholder": "GPU-Speicherzuweisung auswählen",
+        "options": {
+          "generalDescription": "Konfigurieren Sie, wie Modelle auf Ihre GPUs geladen werden",
+          "evenly": {
+            "title": "Gleichmäßig aufteilen",
+            "description": "Speicher gleichmäßig auf GPUs verteilen"
+          },
+          "priorityOrder": {
+            "title": "Prioritätsreihenfolge",
+            "description": "Zum Neuordnen ziehen. Das System versucht, auf zunächst aufgeführten GPUs mehr zuzuweisen"
+          },
+          "custom": {
+            "title": "Benutzerdefiniert",
+            "description": "Speicher zuweisen",
+            "maxAllocation": "Maximale Zuweisung"
+          }
+        }
+      },
+      "deviceId.info": "Eindeutige Kennung für dieses Gerät",
+      "changesOnlyAffectNewlyLoadedModels": "Änderungen wirken sich nur auf neu geladene Modelle aus",
+      "toggleGpu": "GPU aktivieren/deaktivieren"
+    },
+    "advancedGpuSettings": "Erweiterte GPU-Einstellungen",
+    "advancedGpuSettings.info": "Wenn Sie sich nicht sicher sind, belassen Sie diese bei ihren Standardwerten",
+    "advancedGpuSettings.reset": "Auf Standard zurücksetzen",
     "mainGpu": {
       "title": "Haupt-GPU",
       "description": "Die GPU, die für die Modellberechnung priorisiert werden soll.",
@@ -506,6 +612,26 @@
       "title": "Aufteilungsstrategie",
       "description": "Wie die Modellberechnung auf GPUs aufgeteilt werden soll.",
       "placeholder": "Aufteilungsstrategie auswählen..."
+    }
+  },
+  "load.gpuSplitConfig/title": "GPU-Split-Konfiguration",
+  "envVars/title": "Eine Umgebungsvariable setzen",
+  "envVars": {
+    "select": {
+      "placeholder": "Umgebungsvariable auswählen...",
+      "noOptions": "Keine weiteren verfügbar",
+      "filter": {
+        "placeholder": "Suchergebnisse filtern",
+        "resultsFound_zero": "Keine Ergebnisse gefunden",
+        "resultsFound_one": "1 Ergebnis gefunden",
+        "resultsFound_other": "{{count}} Ergebnisse gefunden"
+      }
+    },
+    "inputValue": {
+      "placeholder": "Wert eingeben"
+    },
+    "values": {
+      "title": "Aktuelle Werte"
     }
   }
 }

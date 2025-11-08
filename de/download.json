@@ -1,8 +1,16 @@
 {
   "postDownloadActionExecutor.zipExtraction/status": "Wird extrahiert...",
+  "postDownloadActionExecutor.tarGzExtraction/status": "Dateien werden extrahiert...",
+  "postDownloadActionExecutor.runtimeIndexerTarGzExtraction/status": "Dateien werden extrahiert...",
+  "postDownloadActionExecutor.modifyModelData/status": "Modelldaten werden aktualisiert...",
+  "postDownloadActionExecutor.notification/status": "Benutzer wird benachrichtigt...",
+  "postDownloadActionExecutor.writeString/status": "Metadaten werden geschrieben...",
+  "postDownloadActionExecutor.updateSelectedBackendVersions/status": "Ausgewählte Version wird aktualisiert...",
+  "postDownloadActionExecutor.extensionPackAutoDeletion/status": "Nicht verwendete Erweiterungen werden gelöscht...",
+  "postDownloadActionExecutor.pluginInstall/status": "Plugin wird installiert...",
+  "postDownloadActionExecutor.pluginUninstall/status": "Plugin wird deinstalliert...",
   "finalizing": "Download wird abgeschlossen... (dies kann einen Moment dauern)",
   "noOptions": "Keine kompatiblen Optionen zum Download verfügbar",
-
   "deeplink/confirmation/title": "Modell von Hugging Face herunterladen 🤗",
   "deeplink/confirmation/subtitle": "{{modelName}}",
   "deeplink/confirmation/selectRecommended": "Empfohlen auswählen",
@@ -16,8 +24,17 @@
   "deeplink/error/modelNotFound/title": "Oh oh, wir konnten dieses Modell nicht finden",
   "deeplink/error/modelNotFound/body": "Überprüfen Sie den Modellnamen und erwägen Sie, eine andere Download-Option auszuprobieren.",
   "deeplink/actions/trySearching": "Versuchen Sie, nach {{modelName}} auf Hugging Face zu suchen",
-
   "downloadsPanel/title": "Downloads",
   "downloadsPanel/sectionTitle/ongoing": "Laufend",
-  "downloadsPanel/sectionTitle/completed": "Abgeschlossen"
+  "downloadsPanel/sectionTitle/completed": "Abgeschlossen",
+  "downloadsPanel": {
+    "reveal": {
+      "mac": "Im Finder anzeigen",
+      "mac/error": "Im Finder konnte nicht angezeigt werden",
+      "nonMac": "Im Datei-Explorer anzeigen",
+      "nonMac/error": "Im Datei-Explorer konnte nicht angezeigt werden"
+    },
+    "completed": "Download abgeschlossen",
+    "loadModel": "Modell laden"
+  }
 }

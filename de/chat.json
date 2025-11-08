@@ -23,12 +23,10 @@
   "noChatSelectedPlaceholder": "Wählen Sie einen Chat",
   "unnamedChat": "Unbenannter Chat",
   "emptyFolder": "Ordner ist leer",
-
   "tokenCount": "Token-Zähler",
   "messageTokenCount": "Eingabetoken-Zähler",
   "tokenCount/hint": "Die Anzahl der Tokens in dieser Nachricht. Gezählt mit dem Tokenizer des aktuell ausgewählten Modells.\n\nErfordert, dass das Modell geladen ist.",
   "messageTokenCount/hint": "Die Anzahl der Tokens in dieser Nachricht. Gezählt mit dem Tokenizer des aktuell ausgewählten Modells. \n\nBeinhaltet **KEINE** Schätzung der Tokens in Dateianhängen.",
-
   "notes": "Gesprächsnotizen",
   "notes/add/first": "Notiz hinzufügen",
   "notes/add/another": "Weitere Notiz hinzufügen",
@@ -37,10 +35,10 @@
   "notes/delete": "Notiz löschen",
   "notes/noteLabel": "Notiz",
   "notes/copyContent": "Notizinhalte kopieren",
-
   "actions/sendMessage/error": "Senden der Nachricht fehlgeschlagen",
   "actions/loadModel/error": "🥲 Laden des Modells fehlgeschlagen",
   "actions/addFile": "[Experimentell] Datei an diese Nachricht anhängen\n(.pdf, Klartext oder .docx)",
+  "actions/addFile/label": "Datei anhängen",
   "actions/changeRole": "Zwischen Benutzer- und Assistentenrollen wechseln.\n\nNützlich, um das Gespräch in eine bestimmte Richtung zu lenken.\n\nKann für 'few-shot learning' oder 'in-context learning'-Szenarien verwendet werden.",
   "actions/addImage": "Bild hinzufügen",
   "actions/deleteMessage": "Nachricht löschen",
@@ -88,9 +86,10 @@
   "actions/createChatAtRoot/error": "Chat konnte nicht im Stammverzeichnis erstellt werden",
   "actions/createFolderAtRoot": "Neuer Ordner...",
   "actions/createFolderAtRoot/error": "Ordner konnte nicht im Stammverzeichnis erstellt werden",
+  "actions/openInFolder/mac": "Im Finder anzeigen",
+  "actions/openInFolder/pc": "Im Datei-Explorer anzeigen",
   "actions/createChat/error": "Chat konnte nicht erstellt werden",
   "actions/deleteChat/errorTitle": "Chat konnte nicht gelöscht werden",
-
   "userFile/fileSizeLimit": "Dateigrößenlimit beträgt ",
   "userFile/noImageSupport": "Modell unterstützt keine Bild-Eingabe",
   "userFile/errorPrefix": "Fehler - ",
@@ -105,40 +104,32 @@
   "errorTitle": "Fehler",
   "userFile/chatTerminalDocumentsCount_one": "{{count}} Dokument im Chat",
   "userFile/chatTerminalDocumentsCount_other": "{{count}} Dokumente im Chat",
-
   "prediction/busyModel/title": "Modell ist beschäftigt",
   "prediction/busyModel/message": "Bitte warten bis das Modell fertig ist und dann erneut versuchen",
   "prediction/noModel/title": "Kein Modell ausgewählt",
   "prediction/modelLoading": "Nachricht in Warteschlange, wird gesendet, sobald das Modell geladen ist",
   "prediction/noModel/message": "Wählen Sie ein Modell, um eine Nachricht zu senden",
   "prediction/unloadModel/error": "Modell konnte nicht entladen werden",
-
   "retrieval/user/processingLabel": "Die KI denkt...",
   "retrieval/powerUser/intermediateStepsHidden": "Zwischenschritte verborgen. Klicken, um anzuzeigen.",
   "retrieval/actions/clickToExpand": "Klicken, um Zwischenschritte anzuzeigen",
   "retrieval/actions/clickToCollapse": "Klicken, um Zwischenschritte zu verbergen",
-
   "style": "Aussehen",
-
   "style/viewMode/markdown": "Markdown",
   "style/viewMode/plaintext": "Klartext",
   "style/viewMode/monospace": "Monospace",
-
   "speculativeDecodingVisualization/toggle": "Akzeptierte Entwurfstoken visualisieren",
   "speculativeDecodingVisualization/fromDraftModel_one": "Akzeptiertes Entwurfstoken",
   "speculativeDecodingVisualization/fromDraftModel_other": "Akzeptierte Entwurfstoken",
   "speculativeDecodingVisualization/cannotChangeViewMode": "Die Auswahl des Ansichtsmodus ist bei der Visualisierung von Entwurfstoken deaktiviert.",
-
   "style/fontSize/label": "Schriftgröße",
   "style/fontSize/medium": "Standard",
   "style/fontSize/large": "Groß",
   "style/fontSize/small": "Klein",
-
   "style/debugBlocks/label": "Debug-Info-Blöcke anzeigen",
-
   "style/thinkingUI/label": "Denk-Blöcke standardmäßig erweitern",
   "style/chatFullWidth/label": "Chat-Container auf Fensterbreite erweitern",
-
+  "style/chatUtilityMenusShowLabel/label": "Beschriftungen in Chat-Menüs anzeigen",
   "messageBlocks": {
     "expandBlockTooltip": "Inhalt erweitern",
     "collapseBlockTooltip": "Inhalt reduzieren",
@@ -148,17 +139,16 @@
       "expandTooltip": "Debug-Info-Block erweitern"
     }
   },
-
+  "chatTabOptions/clearAllMessages": "Clear all messages...",
+  "chatTabOptions/duplicateChat": "Duplicate chat",
   "topBarActions/duplicateChat": "Duplizieren",
   "topBarActions/clearChat": "Alles löschen",
   "topBarActions/clearChatConfirmation": "Möchten Sie wirklich alle Nachrichten in diesem Chat löschen?",
   "topBarActions/clearChatCancel": "Abbrechen",
   "topBarActions/clearChatDelete": "Alles löschen",
-
   "noModels.indexing": "Modell-Dateien werden indexiert... (dies kann einen Moment dauern)",
   "noModels.downloading": "Ihr erstes LLM wird heruntergeladen...",
   "noModels": "Noch keine LLMs! Laden Sie eines herunter, um zu beginnen!",
-
   "plugins": {
     "pluginTrigger": {
       "noPlugins": "Plugin",
@@ -182,7 +172,8 @@
         "placeholder": "Von Ihnen erstellte Plugins werden hier angezeigt"
       },
       "startRunningDevelopmentPlugin/error": "Fehler beim starten des Plugins im Entwicklungsmodus",
-      "stopRunningDevelopmentPlugin/error": "Fehler beim stoppen des Plugins im Entwicklungsmodus"
+      "stopRunningDevelopmentPlugin/error": "Fehler beim stoppen des Plugins im Entwicklungsmodus",
+      "forceReInitPlugin/error": "Failed to restart the plugin"
     },
     "pluginConfiguration": {
       "title": "Plugin-Konfiguration",
@@ -206,9 +197,12 @@
         "revealInFinder": "Im Finder anzeigen",
         "openInFileExplorer": "Im Datei-Explorer öffnen"
       }
-    }
+    },
+    "localFork": {
+      "error": "Failed to create a local development copy of the plugin."
+    },
+    "restartErrorPlugin/error": "Failed to restart the plugin"
   },
-
   "genInfo": {
     "tokensPerSecond": "{{tokensPerSecond}} Tok/Sek",
     "predictedTokensCount": "{{predictedTokensCount}} Tokens",
@@ -224,5 +218,8 @@
     "stopReason.contextLengthReached": "Kontextlängenlimit erreicht",
     "speculativeDecodedBy": "Entwurfsmodell: {{decodedBy}}",
     "speculativeDecodingStats": "{{accepted}}/{{total}} Entwurfstoken akzeptiert ({{percentage}}%)"
+  },
+  "tabs": {
+    "systemPromptEditorTab.headerLabel": "Editing System Prompt"
   }
 }

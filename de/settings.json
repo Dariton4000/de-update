@@ -1,7 +1,7 @@
 {
   "settingsDialogTitle": "App-Einstellungen",
   "settingsDialogButtonTooltip": "App-Einstellungen",
-
+  "accountDialogButtonTooltip": "Konto",
   "settingsNewButtonPopover": {
     "primary": "App-Einstellungen befinden sich jetzt in der unteren rechten Ecke.",
     "secondary": "Klicke auf die ⚙️-Schaltfläche, um sie zu öffnen.",
@@ -57,7 +57,6 @@
   "chat/alwaysShowPromptTemplate": "Prompt-Vorlage immer in der Chat-Seitenleiste anzeigen",
   "chat/highlightChatMessageOnHover": "Chat-Nachricht beim Überfahren mit der Maus hervorheben",
   "chat/doubleClickMessageToEdit": "Doppelklicken Sie auf eine Chat-Nachricht, um sie zu bearbeiten",
-
   "chat/aiNaming/label": "KI-Chat-Benennung",
   "chat/aiNaming/mode/label": "KI-generierte Chat-Namen",
   "chat/aiNaming/mode/value/never": "Nie",
@@ -71,13 +70,11 @@
   "chat/keyboardShortcuts/verbPrefix": "Verwenden",
   "chat/keyboardShortcuts/regenerate": "um die letzte Nachricht im Chat neu zu generieren",
   "chat/keyboardShortcuts/sendMessage": "um eine Nachricht zu senden",
-
   "onboarding/blockTitle": "Onboarding-Hinweise",
   "onboarding/dismissedHints": "Verworfene Onboarding-Hinweise",
   "onboarding/resetHintTooltip": "Klicken, um diesen Onboarding-Hinweis wieder zu aktivieren",
   "onboarding/resetAllHints": "Alle Onboarding-Hinweise zurücksetzen",
   "onboarding/noneDismissed": "Keine verworfenen Hinweise, derzeit werden alle Onboarding-Hilfestellungen angezeigt, bis sie verworfen werden",
-
   "firstTimeExperienceLabel": "Chat-Erfahrung beim ersten Mal",
   "firstTimeExperienceMarkCompletedLabel": "Als abgeschlossen markieren",
   "firstTimeExperienceResetLabel": "Zurücksetzen",
@@ -91,30 +88,27 @@
   "changeLanguageLabel": "Sprache der App ändern (noch in Entwicklung)",
   "developerLabel": "Entwickler",
   "localServiceLabel": "Lokaler LLM-Dienst (Headless)",
+  "modelDefaultsLabel": "Modellvorgaben",
   "showExperimentalFeaturesLabel": "Experimentelle Funktionen anzeigen",
   "appFirstLoadLabel": "App-Erfahrung beim ersten Laden",
   "showDebugInfoBlocksInChatLabel": "Debug-Infoblöcke im Chat anzeigen",
   "autoLoadBundledLLMLabel": "Beim Start automatisch ein mitgeliefertes LLM-Modell laden",
   "showReleaseNotes": "Versionshinweise anzeigen",
   "hideReleaseNotes": "Versionshinweise ausblenden",
-
   "backendDownloadNewUpdate": "Neuere Backends sind verfügbar!",
   "backendDownloadNewUpdateAction": "Zur Entwicklerseite gehen",
-
   "backendDownloadChannel.label": "LM Studio Erweiterungspakete Download-Kanal",
   "backendDownloadChannel.value.stable": "Stabil",
   "backendDownloadChannel.value.beta": "Beta",
   "backendDownloadChannel.value.latest": "Entwicklung",
   "backendDownloadChannel.shortLabel": "Runtime-Download-Kanal",
   "backendDownloadChannel.hint": "Wählen Sie den Kanal aus, von dem die LM Studio Erweiterungspakete heruntergeladen werden sollen. \"{{stableName}}\" ist der empfohlene Kanal für die meisten Benutzer.",
-
   "appUpdateChannel.label": "Update-Kanal",
   "appUpdateChannel.value.stable": "Stabil",
   "appUpdateChannel.value.beta": "Beta",
   "appUpdateChannel.value.alpha": "Alpha",
   "appUpdateChannel.shortLabel": "App-Update-Kanal",
   "appUpdateChannel.hint": "Wählen Sie den Kanal aus, von dem LM Studio-App-Updates empfangen werden sollen. \"{{stableName}}\" ist der empfohlene Kanal für die meisten Benutzer.",
-
   "modelLoadingGuardrails.label": "Modell-Ladeschutz",
   "modelLoadingGuardrails.description": "Das Laden von Modellen über die Systemressourcengrenzen hinaus kann zu Systeminstabilität oder Einfrieren führen. Ladeschutz verhindert versehentliche Überlastung. Passen Sie diese Limits hier an, falls erforderlich, aber beachten Sie, dass das Laden von Modellen nahe der Systemgrenze die Stabilität verringern kann.",
   "modelLoadingGuardrails.value.off": "AUS (Nicht empfohlen)",
@@ -135,26 +129,22 @@
   "modelLoadingGuardrails.custom.label": "Speicherlimit: ",
   "modelLoadingGuardrails.custom.unitGB": "GB",
   "modelLoadingGuardrails.custom.description": "Legen Sie ein benutzerdefiniertes Speicherlimit für das Laden von Modellen fest. Modelle werden nicht geladen, wenn dieses Limit überschritten wird.",
-
+  "modelLoadingGuardrails.alwaysAllowLoadAnyway": "(Not recommended) Always allow 'Load Anyway' without holding Alt/Option",
   "experimentalLoadPresets": "Unterstützung für Modellladekonfigurationen in Voreinstellungen aktivieren",
   "experimentalLoadPresets.description": "Ob Voreinstellungen Modellladekonfigurationen enthalten dürfen. Diese Funktion ist experimentell und wir freuen uns über Feedback.",
-
   "unloadPreviousJITModelOnLoad": "JIT-Modelle automatisch entfernen: Sicherstellen, dass zu jedem Zeitpunkt höchstens 1 Modell über JIT geladen ist (entlädt vorheriges Modell)",
+  "autoDeleteExtensionPacks": "Auto-delete least recently used Runtime Extension Packs",
   "autoUpdateExtensionPacks": "Ausgewählte Runtime-Erweiterungspakete automatisch aktualisieren",
   "useHFProxy.label": "LM Studios Hugging Face Proxy verwenden",
   "useHFProxy.hint": "Verwenden Sie LM Studios Hugging Face Proxy zum Suchen und Herunterladen von Modellen. Dies kann Benutzern helfen, die Probleme beim direkten Zugriff auf Hugging Face haben.",
   "separateReasoningContentInResponses": "Gegebenenfalls `reasoning_content` und `content` in API-Antworten trennen",
   "separateReasoningContentInResponses/hint": "Diese Einstellung funktioniert nur für 'Reasoning'-Modelle wie DeepSeek R1, seine destillierten Varianten und andere Modelle, die CoT in `<think>`- und `</think>`-Tags erzeugen.",
-
   "promptWhenCommittingUnsavedChangesWithNewFields": "Voreinstellungen: Bestätigungsdialog anzeigen, wenn neue Felder zu den Voreinstellungen hinzugefügt werden",
   "promptWhenCommittingUnsavedChangesWithNewFields.description": "Dies ist nützlich, um versehentliches Hinzufügen neuer Felder zu den Voreinstellungen zu verhindern",
-
   "enableLocalService": "Lokalen LLM-Dienst aktivieren",
   "enableLocalService.subtitle": "LM Studios LLM-Server verwenden, ohne die LM Studio-Anwendung geöffnet halten zu müssen",
   "enableLocalService.description": "Wenn aktiviert, wird der LM Studio Local LLM Service beim Start gestartet. Das Schließen von LM Studio lässt den Local LLM Service ebenfalls im System-Tray laufen.",
-
   "expandConfigsOnClick": "Konfigurationen durch Klicken erweitern, anstatt durch Hover",
-
   "migrateChats": {
     "label": "Chats vor Version 0.3.0 migrieren",
     "hasBetterLabel": "Chats vor Version 0.3.0 erneut migrieren",
@@ -179,5 +169,28 @@
     "hasBetterFooterCardText": "Wir haben den Chat-Migrator verbessert, seit Sie Ihre alten Chats migriert haben. Sie können den Migrationsprozess erneut ausführen. (Wir erstellen einen neuen Ordner für die neu migrierten Chats.)",
     "dismissConfirm": "Verwerfen",
     "dismissConfirmDescription": "Die Chat-Migration kann jederzeit in den Einstellungen durchgeführt werden"
+  },
+  "toolConfirmation": {
+    "label": "Bestätigung für Toolaufrufe",
+    "neverAsk": {
+      "label": "Nie vor dem Ausführen eines Tools um Bestätigung bitten (NICHT EMPFOHLEN)",
+      "hint": "Bestätigungen vor dem Ausführen eines Tools deaktivieren. Nicht empfohlen.",
+      "warnTitle": "Sind Sie sicher?",
+      "warnDescription": "Das Deaktivieren von Bestätigungen für Toolaufrufe ist gefährlich. Wenn eines Ihrer Plugins ein Tool beiträgt, das potenziell destruktive Aktionen ausführen kann (z. B. einen Befehl ausführen, Dateien löschen, Dateien überschreiben, Dateien hochladen usw.), kann das Modell dies ohne jede Bestätigung tun. Sie können Bestätigungen jederzeit pro Tool oder sogar pro Plugin deaktivieren. Diese Option zu aktivieren ist NICHT empfohlen. Bitte seien Sie vorsichtig.",
+      "warnButton": "Ich verstehe die Risiken"
+    }
+  },
+  "defaultContextLength": {
+    "label": "Standard-Kontextlänge",
+    "maxTitle": "Maximales Modell",
+    "customTitle": "Benutzerdefinierter Wert",
+    "maxSubtitle": "Die maximale vom jeweiligen Modell unterstützte Kontextlänge verwenden.",
+    "customSubtitle": "Standard-Kontextlänge für das Laden neuer Modelle festlegen. Wenn die vom Modell unterstützte maximale Kontextlänge niedriger ist, wird dieser Wert verwendet.",
+    "invalidNaNError": "Ungültiger Wert für die Kontextlänge. Verwende {{value}}",
+    "invalidRangeError": "Ungültiger Wert für die Kontextlänge. Sollte im Bereich von 1 bis 2^30 liegen. Verwende {{value}}",
+    "largeContextWarning": "Je höher die Kontextlänge, desto mehr Speicher benötigt das Modell. Wenn Sie unsicher sind, ändern Sie die Standardeinstellung nicht"
+  },
+  "jitTTL": {
+    "subtitle": "Just-in-time geladene Modelle werden nach der angegebenen Leerlaufdauer automatisch entladen."
   }
 }
